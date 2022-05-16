@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="@color/purple_200"
+                    app:titleTextColor="@color/white"/>
+                <TextView
+                    android:id="@+id/home_title"
+                    android:layout_below="@id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WELCOME"
+                    android:textColor="@color/grey"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:id="@+id/username_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_title"
+                    android:text="Username"
+                    android:textColor="@color/grey"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/home_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_title"
+                    android:layout_toRightOf="@id/username_label"
+                    android:text="...."
+                    android:textColor="@color/grey"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/password_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_username"
+                    android:text="PASSWORD"
+                    android:textColor="@color/grey"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/home_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username_label"
+                    android:layout_toRightOf="@id/password_label"
+                    android:text="...."
+                    android:textColor="@color/grey"
+                    android:textSize="20sp" />
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_below="@id/recycler_layout"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="80dp"
+                    android:layout_below="@id/home_password"
+                    android:id="@+id/recycler_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    tools:listitem="@layout/list_item_view"
+                    />
+
+
+        </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
